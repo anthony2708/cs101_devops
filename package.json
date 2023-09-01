@@ -1,0 +1,19 @@
+{
+  "name": "cs101_devops",
+  "version": "1.0.0",
+  "description": "A sample repo for testing Docker with Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Test OK\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": "github:anthony2708/cs101_devops",
+  "author": "Anthony Bui",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
