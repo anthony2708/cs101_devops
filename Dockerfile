@@ -16,10 +16,13 @@ ENV NODE_ENV=production
 # --> Remove this line and write your code here
 
 # Download and install dependencies
+#   --offline: trigger an error if any required dependencies are not available in local cache
+#   --frozen-lockfile: don't generate a lockfile and fail if an update is needed
+#   --link-duplicates: create hardlinks to the repeated modules in node_modules
 RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=yarn.lock,target=yarn.lock \
     --mount=type=cache,target=/usr/local/share/.cache/yarn \
-    yarn install --frozen-lockfile 
+    yarn --frozen-lockfile --offline --link-duplicates
 
 # TODO: Run the application command with the user node
 # --> Remove this line and write your code here
