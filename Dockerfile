@@ -18,6 +18,7 @@ ENV NODE_ENV=production
 # Download and install dependencies
 RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=yarn.lock,target=yarn.lock \
+    --mount=type=cache,target=/usr/local/share/.cache/yarn \
     yarn install --frozen-lockfile 
 
 # TODO: Run the application command with the user node

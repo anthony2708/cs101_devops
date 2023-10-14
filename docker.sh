@@ -33,9 +33,9 @@ echo $TOKEN | docker login ghcr.io --username $USERNAME --password-stdin
 
 # Build Docker
 echo "Building Docker..."
-docker build -t ghcr.io/$USERNAME/:$NAME:latest .
+docker build -t ghcr.io/$USERNAME/$NAME:latest .
 
 # Push Docker
 echo "Pushing Docker..."
-docker push ghcr.io/$USERNAME/:$NAME:latest
+docker push ghcr.io/$USERNAME/$NAME:latest
 
