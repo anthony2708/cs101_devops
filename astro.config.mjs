@@ -45,13 +45,29 @@ export default defineConfig({
 				{
 					label: 'Tại sao lại phải DevOps?',
 					autogenerate: { directory: 'guides/devops' }
+				},
+				{
+					label: 'Học lập trình với DevOps',
+					autogenerate: { directory: 'guides/golang' }
 				}
 			]
 		}, {
 			label: 'Tài liệu tham khảo',
-			autogenerate: {
-				directory: 'reference'
-			}
+			items: [
+				{
+					label: 'Ngày 1 - Giới thiệu',
+					link: '/reference/day1',
+				},
+				{
+					label: 'Tại sao lại phải DevOps?',
+					autogenerate: { directory: 'reference/devops' }
+				},
+				{
+					label: 'Học lập trình với DevOps',
+					autogenerate: { directory: 'reference/golang' }
+				}
+			]
+			
 		}]
 	}),
 	tailwind({
