@@ -1,9 +1,7 @@
 ---
 title: Ngày 8 - Khởi động với Go
 sidebar:
-  badge:
-    text: Mới
-    variant: tip
+  order: 2
 ---
 
 import { LinkCard, Code } from '@astrojs/starlight/components';
@@ -39,7 +37,7 @@ phiên bản mới**):_
 _Sau khi cài đặt xong, mở **Visual Studio Code**, sau đó mở **Command Prompt (Trình nhắc lệnh)** để kiểm tra
 phiên bản đã cài đặt._
 
-```bash
+```bash title="Checking Go version..."
 
 go version
 
@@ -50,7 +48,7 @@ go version
 _Tiếp theo, ta kiểm tra vị trí cho môi trường làm việc với Go. Nếu bạn muốn làm việc ở một thư mục khác, ta phải thay đổi
 bằng cách thêm thư mục cần dùng vào biến **GOPATH**._
 
-```bash
+```bash title="Checking and editing environment variables..."
 
 go env
 go env -w GOPATH=<your-path>
@@ -76,14 +74,14 @@ _Sau đó, đưa nội dung này vào bên trong tập tin._
 _Kiểm tra xem chương trình có chạy đúng như kỳ vọng hay không. Nếu chương trình đã chạy đúng kỳ vọng, chúng ta sẽ xuất chương
 trình ra một tập tin thực thi khác._
 
-```bash
+```bash title="Running the code..."
 
 go run main.go
 
 ```
 ![Hello Vietnam](../../../../assets/golang/hello_vietnam.png)
 
-```bash
+```bash title="Building the program..."
 
 go build main.go
 
@@ -100,7 +98,7 @@ _Dưới đây là một hình ảnh nếu như đưa vào loại trừ thành c
 
 _Nếu đem tập tin thực thi (.exe) đó sang máy khách chạy, kết quả sẽ là tương tự._
 
-```
+```powershell title="Running the code on different machine..."
 > ./main.exe
 Xin chào Việt Nam!
 
