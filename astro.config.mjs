@@ -49,6 +49,10 @@ export default defineConfig({
 				{
 					label: 'Học lập trình với DevOps',
 					autogenerate: { directory: 'guides/golang' }
+				},
+				{
+					label: 'Linux và DevOps',
+					autogenerate: { directory: 'guides/linux' }
 				}
 			]
 		}, {
@@ -65,6 +69,10 @@ export default defineConfig({
 				{
 					label: 'Học lập trình với DevOps',
 					autogenerate: { directory: 'reference/golang' }
+				},
+				{
+					label: 'Linux và DevOps',
+					autogenerate: { directory: 'reference/linux' }
 				}
 			]
 			

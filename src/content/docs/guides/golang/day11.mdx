@@ -2,14 +2,9 @@
 title: Ngày 11 - Biến/Hằng/Kiểu dữ liệu trong Go
 sidebar:
   order: 5
-  badge:
-    text: Mới
-    variant: tip
 ---
 
-import { LinkCard, Code, Steps } from '@astrojs/starlight/components';
-import importedCode from '/src/content/docs/reference/golang/code/src/web/main.go?raw';
-import newCode from '/src/content/docs/reference/golang/code/src/web/printf.go?raw';
+import { LinkCard, Steps } from '@astrojs/starlight/components';
 
 _Chào mừng mọi người đến với ngày 11 của hành trình này. Sau khi chúng ta có được những kiến
 thức đầu tiên về Golang, giờ là lúc đi sâu hơn vào các thuật ngữ quan trọng: **Biến số, Hằng
@@ -93,7 +88,21 @@ _Cuối cùng, chúng ta sẽ thêm số ngày hoàn thành dưới dạng **m�
 kéo dài)**. Hành trình kéo dài, nghĩa là mã nguồn này vẫn còn thay đổi. Dưới đây là bản cập 
 nhật và kết quả sau khi chạy chương trình._
 
-<Code code={importedCode} lang="go" title="src/main.go" />
+```go title="src/main.go"
+package main
+
+import "fmt"
+
+func vars() {
+	var challenge = "#90NgàyDevOps"
+	const totalDays = 90
+	var daysCompleted = 11
+
+	fmt.Println("Chào mừng đến với", challenge, "")
+	fmt.Println("Đây là hành trình", totalDays, "ngày và bạn đã hoàn thành", daysCompleted, "ngày.")
+	fmt.Println("Chúc bạn thượng lộ bình an!")
+}
+```
 
 ![11 out of 90 days](../../../../assets/golang/90DevOps_11Days.png)
 
@@ -101,13 +110,22 @@ _Một phiên bản khác của chương trình cho phép bạn sử dụng hàm
 để in ra màn hình, **tương tự như C**. Ta sẽ thay thế bằng ```%v``` để chỉ biến số và ```\n``` để
 xuống dòng._
 
-:::caution
 
-_Bạn nên thay thế tên hàm ```printf``` thành ```main``` trước khi chạy đoạn mã nguồn phía dưới._
+```go title="src/main.go"
+package main
 
-:::
+import "fmt"
 
-<Code code={newCode} lang="go" title="src/printf.go" />
+func main() {
+	var challenge = "#90NgàyDevOps"
+	const totalDays = 90
+	var daysCompleted = 11
+
+	fmt.Printf("Chào mừng đến với %v\n", challenge)
+	fmt.Printf("Đây là hành trình %v ngày và bạn đã hoàn thành %v ngày.\n", totalDays, daysCompleted)
+	fmt.Println("Chúc bạn thượng lộ bình an!")
+}
+```
 
 _Biến số cũng có thể được khai báo đơn giản hơn mà không cần sử dụng từ khóa là ```var```._
 
