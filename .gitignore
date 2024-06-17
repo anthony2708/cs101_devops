@@ -34,7 +34,7 @@ pnpm-debug.log*
 *.out
 
 # Dependency directories (remove the comment below to include it)
-src/content/docs/reference/golang/code/pkg/
+src/assets/code/pkg/
 
 # Go workspace file
 go.work
