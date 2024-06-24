@@ -124,10 +124,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/starlight-tailwind/-/starlight-tailwind-2.0.3.tgz#6ecb07e922b6d25e5c9daac866ae657a0e01194a"
   integrity sha512-ZwbdXS/9rxYlo3tKZoTZoBPUnaaqek02b341dHwOkmMT0lIR2w+8k0mRUGxnRaYtPdMcaL+nYFd8RUa8sjdyRg==
 
-"@astrojs/starlight@^0.24.2":
-  version "0.24.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/starlight/-/starlight-0.24.2.tgz#3ed9fc95dd0dd7de7781e6914e23686d1161fe00"
-  integrity sha512-hXFVBHcr2a4UwX5GDCNQEZsRXdgVlNzZ7txpI2jlMvtzbgfoLEGOHjaHpB5QTW/OCrRAMjcx9Zx0HxRliohaxQ==
+"@astrojs/starlight@^0.24.4":
+  version "0.24.4"
+  resolved "https://registry.yarnpkg.com/@astrojs/starlight/-/starlight-0.24.4.tgz#e10abee76e5e35ed5b10920f63dbdb6177912864"
+  integrity sha512-rED8LPQwsXlgclfdHO+okUGcirof1prrxZLuKWp380xC/T7u2qQ5b1gnKqpM+92x+vhs8GYT7mHGKz9VctwdUg==
   dependencies:
     "@astrojs/mdx" "^3.1.0"
     "@astrojs/sitemap" "^3.1.5"
@@ -1150,12 +1150,7 @@ acorn-jsx@^5.0.0:
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
   integrity sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==
 
-acorn@^8.0.0, acorn@^8.11.3, acorn@^8.12.0:
-  version "8.12.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.12.0.tgz#1627bfa2e058148036133b8d9b51a700663c294c"
-  integrity sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==
-
-acorn@^8.12.0:
+acorn@^8.0.0, acorn@^8.12.0:
   version "8.12.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.12.0.tgz#1627bfa2e058148036133b8d9b51a700663c294c"
   integrity sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==
