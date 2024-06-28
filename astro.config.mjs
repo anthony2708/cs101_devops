@@ -53,6 +53,10 @@ export default defineConfig({
 				{
 					label: 'Linux và DevOps',
 					autogenerate: { directory: 'guides/linux' }
+				},
+				{
+					label: 'Mạng máy tính',
+					autogenerate: { directory: 'guides/network' }
 				}
 			]
 		}, {
@@ -73,6 +77,10 @@ export default defineConfig({
 				{
 					label: 'Linux và DevOps',
 					autogenerate: { directory: 'reference/linux' }
+				},
+				{
+					label: 'Mạng máy tính',
+					autogenerate: { directory: 'reference/network' }
 				}
 			]
 			
