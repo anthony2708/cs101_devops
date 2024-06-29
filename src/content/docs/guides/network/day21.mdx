@@ -1,18 +1,127 @@
 ---
-title: Ngày 21
+title: Ngày 21 - Bức tranh Mạng
 sidebar:
   badge:
-    text: Chưa hoàn thiện
-    variant: caution
+    text: Mới
+    variant: tip  
 ---
 
 import { LinkCard } from '@astrojs/starlight/components';
 
-**Nội dung hiện tại chưa được cập nhật.**
+_Chào mừng mọi người đến với chặng tiếp theo của hành trình 90 ngày cùng DevOps, và chào mừng
+đến với điểm dừng chân mới của chúng ta - **Mạng máy tính**. Ở đó sẽ có rất nhiều những
+câu chuyện thú vị, cũng như những hoạt động hấp dẫn đang chờ bạn khám phá._
 
-**Để biết thêm thông tin, vui lòng quay lại sau hoặc quay về trang chính thức của chủ nhân hành trình.**
+**_Hãy xách ba lô lên và đi thôi!_** 🎒
+
+![quote](../../../../assets/network/quote.jpg)
+
+> **Nguồn**: [QuoteFancy](https://quotefancy.com/quote/803046/Erich-Fromm-Let-your-mind-start-a-journey-through-a-strange-new-world-Leave-all-thoughts)
+
+## Tại sao là Mạng máy tính?
+
+_Để trả lời câu hỏi này, cần phải hỏi ngược lại: **Thế rốt cuộc chúng ta dựng lên tất cả những máy 
+ảo rồi Docker các kiểu có cần Mạng hay không?** Tất nhiên, **là có**. Vì thế, việc hiểu rõ những gì 
+liên quan đến Mạng máy tính không chỉ giúp chúng ta làm việc với DevOps dễ dàng hơn mà quan trọng hơn
+hết, là việc hiểu kiến trúc Mạng góp phần không nhỏ vào việc làm giàu kho tàng kiến thức của chúng ta 
+(**cũng như làm giàu cái ví tiền của chính chúng ta nữa**)_ 🤣
+
+## NetDevOps?
+
+_Network DevOps là một thuật ngữ tuy lạ mà quen - Đó là **DevOps cho hệ thống mạng**, tức là sử dụng các 
+thực hành của DevOps trong quá trình phát triển và vận hành mạng máy tính. Điều quan trọng của DevOps
+như đã đề cập ở các giai đoạn trước chính là tính **tự động hóa** - nghĩa là chúng ta phá vỡ những rào cản
+giữa Dev và Ops trong quá trình xây dựng mạng để không biến hai nhóm này trở thành những **điểm nghẽn gây
+thất bại**, **tăng tốc độ triển khai** cũng như đảm bảo **tính ổn định** và **cải tiến liên tục** cho hệ 
+thống tỷ đô của chúng ta. Mà tự động hóa là **all-code**, tức là **chỉ có mã nguồn** mà thôi, không làm
+bằng tay._
+
+_Nếu bạn muốn tìm hiểu thêm, xin vui lòng xem tại 
+**[đây](https://www.thousandeyes.com/learning/techtorials/network-devops)**._
+
+## Phủ sóng chuyên sâu
+
+_Dưới đây là hai đường dẫn video để giúp bạn theo dõi cụ thể hơn._ 
+
+- [Đường dẫn 1](https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=1)
+- [Đường dẫn 2](https://www.youtube.com/watch?v=H7-NR3Q3BeI&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=2)
+
+_Còn dưới đây là các định nghĩa đơn giản nhất về Mạng máy tính._
+
+![Network](../../../../assets/network/network.jpg)
+
+> **Nguồn**: [GeeksForGeeks](https://www.geeksforgeeks.org/basics-computer-networking/)
+
+### Host (Máy chủ)
+
+_Là bất kỳ thiết bị nào có khả năng gửi hoặc nhận dữ liệu._
+
+### Địa chỉ IP
+
+_Hãy xem mỗi nhà có một số nhà, số nhà đó dùng để định vị căn nhà nằm ở đâu. Địa chỉ IP cũng làm nhiệm vụ tương
+tự, nhưng trên **không gian mạng toàn cầu**._
+
+### Mạng
+
+_Một hệ thống chuyển dữ liệu giữa các host với nhau, có các kết nối được thực hiện dưới những phương pháp 
+giống nhau._
+
+### Chuyển mạch (Switch)
+
+_Thiết bị giao tiếp trong mạng, dùng trong chuyển tiếp các gói tin đến các host khi được kết nối tới. Đối với
+Switch, gói tin khi đến switch sẽ được **broadcast (phát sóng)** đi khắp mạng trước khi xác định được vị trí chính
+xác của host cần nhận gói tin._
+
+### Định tuyến (Router)
+
+_Thiết bị giao tiếp liên mạng, dùng trong chuyển tiếp các gói tin giữa các mạng với nhau. Trên router có một bảng
+chứa thông tin về đường đi mà gói tin sẽ thực hiện trong vận chuyển, người ta gọi đó là **Bảng định tuyến**. Mỗi
+router cũng sẽ có một địa chỉ thường được gọi là **Default Gateway** - đây là địa chỉ giao tiếp giữa bên trong và 
+bên ngoài mạng._ 
+
+### Gói tin (Packet)
+
+_Là một gói (pack) chứa dữ liệu truyền đi. Gói tin có kích thước giới hạn. Một lượng dữ liệu bất kỳ có thể được chia 
+nhỏ thành nhiều gói tin khác nhau._
+
+### So sánh giữa Router và Switch
+
+_Router và Switch có vai trò tương đối giống nhau nhưng phạm vi hoạt động khác nhau: **Switch dùng trong một mạng (để
+chuyển tiếp)** còn Router dùng trong **giao tiếp liên mạng (để truyền tin)**._
+
+## Hơn thế nữa...
+
+_Chúng ta vẫn còn đó rất nhiều những thiết bị khác chưa được kể ở đây, đều có những tính năng như chuyển mạch hay
+định tuyến._
+
+- _Access Points (Các điểm truy cập)_
+- _Firewalls (Tường lửa)_
+- _Load Balancers (Thiết bị cân bằng tải)_
+- _Layer 3 Switches (Chuyển mạch cấp 3)_
+- _IDS / IPS (Hệ thống nhận diện/ngăn ngừa xâm nhập)_
+- _Proxies (Máy chủ proxy)_
+- _Virtual Switches (Chuyển mạch ảo)_
+- _Virtual Routers (Bộ định tuyến ảo)_
+
+_Và chúng ta cũng sẽ tìm hiểu thêm về những phần như sau vào những ngày tiếp theo._
+
+- _Mô hình OSI_
+- _Các giao thức mạng_ 
+- _DNS (Hệ thống phân giải tên miền)_
+- _Giao thức NAT_
+- _Giao thức DHCP_
+- _Mạng con (Subnets)_
+
+**_Còn bây giờ, chúng ta kết thúc ngày 21 ở đây._**
+
+## Tài liệu tham khảo 📚
+
+_Mời mọi người chuyển sang trang này để theo dõi tất cả tài liệu liên quan trong giai đoạn 4, 
+để giúp bản thân có được những tài liệu hữu ích về Mạng máy tính trong làm việc với DevOps._
 
 <LinkCard
-  title="Trang chủ"
-  href="https://www.builetuananh.name.vn"
+  title="Ngày 21 - Tham khảo"
+  href="../../../reference/network/day21"
 />
+
+_Hẹn gặp mọi người ở những ngày tiếp theo._ 🚀
