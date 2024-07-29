@@ -15,23 +15,18 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@astrojs/check@^0.8.2":
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/check/-/check-0.8.2.tgz#e88b404d19a7e65743a2389692341340b0e60906"
-  integrity sha512-L0V9dGb2PGvK9Mf3kby99Y+qm7EqxaC9tN1MVCvaqp/3pPPZBadR4XAySHipxXqQsxwJS25WQow8/1kMl1e25g==
+"@astrojs/check@^0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@astrojs/check/-/check-0.8.3.tgz#3a60ccd34fd11d9b054b00ca54a9a45f0f63a07e"
+  integrity sha512-ajcSe+ezX5jCc3dreQlWzbknzXgSGnDETNe3C1mawUOtGpO4t5z2YGaD0y+wzB84lmgPWaWZa0fKSPwLq/wUHw==
   dependencies:
-    "@astrojs/language-server" "^2.12.1"
+    "@astrojs/language-server" "^2.12.7"
     chokidar "^3.5.3"
     fast-glob "^3.3.1"
     kleur "^4.1.5"
     yargs "^17.7.2"
 
-"@astrojs/compiler@^2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.8.1.tgz#2b9c4e8286c037ced8ea63074e226f5855bed1c9"
-  integrity sha512-NGfPAgU/9rvDEwsXu82RI1AxiivaxtEYBK9saW1f+2fTHUUqCJQ27HYtb2akG2QxCmFikgZ9zk26BEWgiHho1Q==
-
-"@astrojs/compiler@^2.9.1":
+"@astrojs/compiler@^2.9.0", "@astrojs/compiler@^2.9.1":
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.9.2.tgz#c01dcdb14dc938758e66f9856934b83b6cd986d1"
   integrity sha512-Vpu0Ffsj8SoV+N0DFHlxxOMKHwSC9059Xy/OlG1t6uFYSoJXxkBC2WyF6igO7x10V+8uJrhOxaXr3nA90kJXow==
@@ -41,10 +36,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/internal-helpers/-/internal-helpers-0.4.1.tgz#ceb5de49346dbdbfb6cba1b683c07fef7df56e1c"
   integrity sha512-bMf9jFihO8YP940uD70SI/RDzIhUHJAolWVcO1v5PUivxGKvfLZTLTVVxEYzGYyPsA3ivdLNqMnL5VgmQySa+g==
 
-"@astrojs/language-server@^2.12.1":
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/language-server/-/language-server-2.12.1.tgz#799e8eed7626a7263b8e2c38e98a73f4ed111028"
-  integrity sha512-CCibE6XwSmrZEKlPDr48LZJN7NWxOurOJK1yOzqZFMNV8Y6DIqF6s1e60gbNNHMZkthWYBNTPno4Ni/XyviinQ==
+"@astrojs/language-server@^2.12.7":
+  version "2.12.8"
+  resolved "https://registry.yarnpkg.com/@astrojs/language-server/-/language-server-2.12.8.tgz#64a1369ace5180958f58ab0e0dbe167b33f2c707"
+  integrity sha512-aUppjqbCdFkd2Cdr8tDtd9id7lAZAmpwpYTQrOm69z8P4NaGUE/ksMIhd0Q99zXfSBjDVC7HlxSjPg8Y7xakfg==
   dependencies:
     "@astrojs/compiler" "^2.9.1"
     "@jridgewell/sourcemap-codec" "^1.4.15"
