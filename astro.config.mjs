@@ -57,6 +57,10 @@ export default defineConfig({
 				{
 					label: 'Mạng máy tính',
 					autogenerate: { directory: 'guides/network' }
+				},
+				{
+					label: 'Điện toán đám mây',
+					autogenerate: { directory: 'guides/cloud' }
 				}
 			]
 		}, {
@@ -81,6 +85,10 @@ export default defineConfig({
 				{
 					label: 'Mạng máy tính',
 					autogenerate: { directory: 'reference/network' }
+				},
+				{
+					label: 'Điện toán đám mây',
+					autogenerate: { directory: 'reference/cloud' }
 				}
 			]
 			
