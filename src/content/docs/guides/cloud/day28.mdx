@@ -1,21 +1,109 @@
 ---
-title: Ngày 28
-sidebar:
-  badge:
-    text: Chưa hoàn thiện
-    variant: caution
+title: Ngày 28 - Các dịch vụ trong AWS (phần 1)
 ---
 
-import { LinkCard } from '@astrojs/starlight/components';
+import { LinkCard, Steps } from '@astrojs/starlight/components';
 
-**Nội dung hiện tại chưa được cập nhật.**
+_Xin chào mọi người, đây là một mục **hoàn toàn khác biệt** đối với bản Việt của series 90 ngày này.
+Đây là lúc chúng ta khai thác những dịch vụ đang được cung cấp bởi AWS cũng như các tiện ích kèm
+theo._
 
-**Để biết thêm thông tin, vui lòng quay lại sau hoặc quay về trang chính thức của chủ nhân hành trình.**
+_Nếu bạn đã sẵn sàng rồi thì đem theo đèn pin, bởi những góc khuất của AWS sẽ được giới thiệu đây.
+**Đi thôi!**_ 🚗
 
-<LinkCard
-  title="Trang chủ"
-  href="https://www.builetuananh.name.vn"
-/>
+## Quản trị dịch vụ
+
+_Các dịch vụ trong AWS hay bất kỳ nhà cung cấp khác đều mang đến ba yêu cầu quan trọng, đó là 
+**tam giác CIA**. Tam giác này bao gồm ba trụ cột sau._
+
+<Steps>
+1. _**Confidentiality - Tính tối mật**. Khả năng bảo đảm dữ liệu không bị thất thoát, thông qua các hoạt
+động khôi phục sau thảm họa._
+2. _**Integrity - Tính toàn vẹn**. Thông qua các bản sao lưu khác nhau, dữ liệu sẽ được giữ nguyên vẹn,
+bất kể vấn đề gì xảy ra._
+3. _**Availability - Tính khả dụng**. Trong một khu vực nhất định, tính khả dụng sẽ được đề cao, nghĩa là
+dù ở bất kỳ đâu, miễn là sử dụng dịch vụ trong khu vực này, việc truy cập vẫn phải giữ ổn định và tốc 
+độ cao._
+</Steps>
+
+_Với AWS, thì khái niệm **Regions (Khu vực), AZ (Vùng khả dụng)** cũng như các định nghĩa kèm theo góp 
+phần quan trọng trong định hình việc quản trị các dịch vụ cung cấp._
+
+## Các dịch vụ cơ bản
+
+**_Ngay sau đây là màn quảng cáo trá hình cho các dịch vụ của AWS._** 🤣
+
+### Máy ảo (VM)
+
+_Điểm khởi phát của điện toán đám mây. Ở AWS người ta gọi đó là **EC2**._
+
+- _Nhiều dòng máy và kích cỡ, cấu hình khác nhau cho những nhu cầu khác nhau. Mọi người có thể xem qua tại
+**[đây](https://aws.amazon.com/vi/ec2/instance-types/)** để biết thêm thông tin chi tiết._
+- _Mỗi máy ảo lại có nhiều tùy chọn khác nhau, và đặt trên một mạng ảo khác nhau, có thể kết nối với các
+mạng ảo khác. Người ta thường gọi là **VPC - Đám mây ảo công cộng**._
+- _Các dòng máy ảo hỗ trợ các phiên bản Linux và Windows **(tất nhiên có cả bản Server rồi)**._
+
+### Dựng mẫu
+
+_Cái này thường người ta hay nói là **WORM (Viết một lần, tái sử dụng nhiều lần)**, giống như một chú sâu 
+cần mẫn. Mọi kết nối từ giao diện màn hình (UI) hay qua API đều sử dụng mẫu với định dạng **JSON (JavaScript 
+Object Notation)**. Do đó, thường người sử dụng muốn làm nhanh sẽ viết sẵn cấu hình dưới định dạng này, và 
+áp dụng nó lên hệ thống một cách trực tiếp giống như lưu sẵn template để làm đủ thứ._ 
+
+_Ở AWS, dịch vụ này là **CloudFormation**. Đối với sử dụng theo dạng **Đa đám mây (multi-cloud)**, chúng ta sẽ 
+nhắc tới **Terraform** - thứ đã làm nên vinh quang cho Khóa luận mà mình đã thực hiện._
+
+### Thay đổi quy mô
+
+_Ahh, AutoScaling, đây là một tính năng cực kỳ quan trọng mà tất thảy chỉ Điện toán đám mây mới làm được, đó là
+tự động thay đổi quy mô sao cho phù hợp với nhu cầu thực tế._
+
+_Ở AWS người ta gọi đây là **AutoScaling Groups**. Một số dịch vụ khác nhau như **EKS (dành cho Kubernetes)** hay 
+**ECS (dành cho Docker)** hay thậm chí là **Lambda (một dịch vụ phi máy chủ)** cũng được xem như đã tích hợp 
+tính năng này._
+
+### Containers
+
+_**Nghe tên là đoán được rồi đúng không nhỉ? Thùng chứa hàng** - Nơi chứa mã nguồn và được vận chuyển đi khắp nơi 
+(ship). Với AWS, tất nhiên chúng ta vừa nhắc đến nó ngay phía trên xong - dưới đây là ba thứ quan trọng nhất._
+
+<Steps>
+1. _**EKS - Dịch vụ quản lý cụm máy chủ Kubernetes**. Nhắc tới Kubernetes (K8s) thường người ta sẽ phải kể nhau nghe về
+**SDN (mạng định nghĩa dưới dạng phần mềm)**, nơi mà có hai lớp gọi là **tầng kiểm soát (control plane)** và **tầng 
+dữ liệu (data plane)**. EKS sẽ giúp quản lý tầng kiểm soát của cụm K8s._
+2. _**ECS - Dịch vụ quản lý cụm container Docker**. Mô hình thanh toán theo giây, không cần điều phối theo dạng SDN như
+đề cập ở trên. Chỉ cần dựng ứng dụng thành **một bản dựng (image)** và cho nó vào mạng ảo thì mọi thứ sẽ được AWS giải
+quyết._
+3. _**Container Registry** - Nơi lưu trữ các bản dựng (image) Docker._
+</Steps>
+
+### Hosting (Dựng trang mạng)
+
+_Ở AWS có một dịch vụ gần như làm hết cho mọi người các bước quan trọng trong việc dựng một trong web, đó là 
+**Elastic Beanstalk**._
+
+- _Cung cấp giải pháp tự động triển khai, thiết lập ứng dụng_
+- _Hỗ trợ các hệ diều hành khác nhau, các ứng dụng có thể lựa chọn loại và kích cỡ_
+- _Phục vụ từ ứng dụng web, di động, API, v.v..._
+- _Hỗ trợ kiểm thử ứng dụng trước khi triển khai._
+
+### Điện toán phi máy chủ
+_Không cần nói cũng biết. Phi máy chủ - nhưng thật ra là **vẫn có máy chủ**, chỉ là **chạy khi cần** chứ không phải 
+vận hành quanh năm, suốt tháng. Thay vì viết mã nguồn theo khối cồng kềnh, **chỉ cần viết hàm**, có đầu vào và đầu ra 
+tương ứng. Khi gọi tới thì nó sẽ đưa hàm lên máy ảo chạy ra kết quả và **hủy máy**. **Hết - cực kỳ đơn giản và thuận lợi**._
+
+_Như đã nhắc tới trước đó, **Lambda** chính là lựa chọn của AWS. Lambda hỗ trọ đa ngôn ngữ lập trình (C#, NodeJS, 
+Python, v.v...), và nó hoàn toàn miễn phí. Ngoài ra còn có nhiều dịch vụ khác kèm theo mà mình sẽ không đề cập tại 
+bài này._
+
+:::tip
+_Khi mở tài khoản tại AWS, mọi người sẽ được cung cấp **một năm sử dụng miễn phí** hầu hết các dịch vụ của AWS. Sau khi 
+kết thúc 12 tháng, hầu như các dịch vụ sẽ tính phí, tuy nhiên vẫn có một số miễn phí trọn đời có giới hạn, trong đó có 
+Lambda (miễn **1 triệu** yêu cầu/tháng, dung lượng **400 ngàn GB-giây/tháng**, tức là lấy kích cỡ dữ liệu * thời gian 
+chạy cùng **100GB luồng truyền HTTP** miễn phí sau khi vượt 6MB/yêu cầu)._
+:::
+
+**_Đó là tất cả những gì mà AWS gửi đến bạn trong ngày 28. Phần 2 sẽ tiếp tục vào ngày 29_** ✅
 
 ## Tài liệu tham khảo 📚
 
