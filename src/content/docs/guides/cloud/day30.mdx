@@ -1,9 +1,5 @@
 ---
 title: Ngày 30 - Mô hình mạng AWS và quản lý hạ tầng
-sidebar:
-  badge:
-    text: Mới
-    variant: tip 
 ---
 
 import { LinkCard, Steps } from '@astrojs/starlight/components';
@@ -63,7 +59,7 @@ _Hai nhóm bảo mật dưới đây nằm trên **cùng một VPC**._
 
 |      **Nguồn**       | **Giao thức** | **Cổng** |
 |:--------------------:|:-------------:|:--------:|
-| **192.168.100.0/30** |      TCP      |    22    |
+| **192.168.100.0/28** |      TCP      |    22    |
 |    **10.0.0.0/24**   |     HTTPS     |   443    |
 
 ##### Chiều ra (Outbound)
@@ -80,7 +76,7 @@ _Hai nhóm bảo mật dưới đây nằm trên **cùng một VPC**._
 
 |      **Nguồn**       | **Giao thức** | **Cổng** |
 |:--------------------:|:-------------:|:--------:|
-| **192.168.100.0/30** |      TCP      |    22    |
+| **192.168.100.0/28** |      TCP      |    22    |
 |    **10.2.0.0/24**   |    Tất cả     |  Tất cả  |
 
 ##### Chiều ra (Outbound)
@@ -90,7 +86,7 @@ _Hai nhóm bảo mật dưới đây nằm trên **cùng một VPC**._
 |  **0.0.0.0/0**  |     Tất cả    |  Tất cả  |
 
 
-### Cân bằng tải - LB
+## Cân bằng tải - LB
 
 _Cái tên nói lên tất cả, cân bằng tải là một việc chúng ta **chia lưu lượng truy cập** vào nhiều máy
 ảo khác nhau thay vì chỉ dồn lên một máy gây quá tải dẫn đến sập hệ thống. Với AWS có ba giải 
