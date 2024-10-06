@@ -1,4 +1,4 @@
-import { defineConfig, squooshImageService } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwind from "@astrojs/tailwind";
 
@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
 	site: 'https://90days.builetuananh.name.vn',
 	image: {
-		service: squooshImageService()
+		service: passthroughImageService()
 	},
 	integrations: [starlight({
 		title: 'BLTA',
@@ -15,7 +15,8 @@ export default defineConfig({
 			'./src/tailwind.css',
 		],
 		logo: {
-			src: './public/ET_Logo.png'
+			src: './public/ET_Logo.png',
+			replacesTitle: true
 		},
 		favicon: '/favicon.png',
 		social: {
@@ -61,6 +62,10 @@ export default defineConfig({
 				{
 					label: 'Điện toán đám mây',
 					autogenerate: { directory: 'guides/cloud' }
+				},
+				{
+					label: 'Quản lý phiên bản',
+					autogenerate: { directory: 'guides/git' }
 				}
 			]
 		}, {
@@ -89,6 +94,10 @@ export default defineConfig({
 				{
 					label: 'Điện toán đám mây',
 					autogenerate: { directory: 'reference/cloud' }
+				},
+				{
+					label: 'Quản lý phiên bản',
+					autogenerate: { directory: 'reference/git' }
 				}
 			]
 			
