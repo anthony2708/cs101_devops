@@ -8,6 +8,8 @@ export default defineConfig({
 	image: {
 		service: passthroughImageService()
 	},
+	// Sharp 0.33.5 has some issues: https://github.com/lovell/sharp/issues/4095
+	// Consider upgrading to Node 22
 	integrations: [starlight({
 		title: 'BLTA',
 		customCss: [
