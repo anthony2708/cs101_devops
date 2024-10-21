@@ -4299,10 +4299,10 @@ sprintf-js@~1.0.2:
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==
 
-starlight-blog@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/starlight-blog/-/starlight-blog-0.13.0.tgz#041ef77324098d445dca61ce0337d8aaf0db73ae"
-  integrity sha512-AQi+5PdsgN/ltQh1j+F/crHLlBFwDUOKgW8H1GnzLUq2T6J7VaOVf62fmCfBDmymfBN4mOfIZuJXq5ZzY3pJmQ==
+starlight-blog@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/starlight-blog/-/starlight-blog-0.14.0.tgz#f4ec2c1788fc9499bca0945c29905faa5c29d57c"
+  integrity sha512-Eu7wuMTpfy/r09daaUx8IWG3z7BhfjVtl7vDfHPsXupiIKz6iB+pVoQqe3zUBUxVKkoPjOLJUx8QPDhw/3faZg==
   dependencies:
     "@astrojs/rss" "4.0.5"
     astro-remote "0.3.2"
